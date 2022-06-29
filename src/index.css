@@ -2,6 +2,12 @@
 @tailwind componenets;
 @tailwind utilities;
 
+@layer utilities {
+  .word-space-5px {
+    word-spacing: 5px;
+  }
+}
+
 /* Importing Font from Google-Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 
@@ -71,6 +77,15 @@ a {
 }
 
 /* Utility Classes */
+.current-page-link {
+  color: #ff4500;
+  font-weight: bold;
+}
+
+.current-page-link::after {
+  transform: scale(1) !important;
+}
+
 .animated-link::after {
   content: "";
   width: 100%;

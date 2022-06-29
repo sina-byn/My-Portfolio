@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuShown, setIsMenuShown] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
   const toggleMenuVisibility = () => {
     setIsMenuShown(!isMenuShown);
   };
@@ -13,23 +14,26 @@ const Navbar = () => {
           <li className='730:text-center'>
             <Link
               to='/'
-              className='animated-link relative text-[18px] 730:text-[1.1rem]'
+              onClick={() => setCurrentPage(1)}
+              className={`${currentPage === 1 ? "current-page-link" : ""} animated-link relative text-[18px] 730:text-[1.1rem]`}
             >
               Home
             </Link>
           </li>
           <li className='730:text-center'>
             <Link
-              to='/'
-              className='animated-link relative text-[18px] 730:text-[1.1rem]'
+              to='/my-work'
+              onClick={() => setCurrentPage(2)}
+              className={`${currentPage === 2 ? "current-page-link" : ""} animated-link relative text-[18px] 730:text-[1.1rem]`}
             >
               My Work
             </Link>
           </li>
           <li className='730:text-center'>
             <Link
-              to='/'
-              className='animated-link relative text-[18px] 730:text-[1.1rem]'
+              to='/about-me'
+              onClick={() => setCurrentPage(3)}
+              className={`${currentPage === 3 ? "current-page-link" : ""} animated-link relative text-[18px] 730:text-[1.1rem]`}
             >
               About Me
             </Link>
