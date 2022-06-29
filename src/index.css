@@ -1,13 +1,67 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind componenets;
+@tailwind utilities;
+
+/* Font-Faces */
+@font-face {
+  font-family: "lato";
+  src: url("../assets/fonts/lato-regular-webfont.woff2") format("woff2"),
+    url("../assets/fonts/lato-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Custom Properties */
+:root {
+  --cover-clr: rgba(20, 20, 20, 0.6);
+  --cover-clr-dark: rgba(20, 20, 20, 0.8);
+
+  --ff-main: "lato";
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  background: url("../public/images/bg.webp") no-repeat center/cover;
+}
+
+body {
+  font-family: var(--ff-main);
+  background-color: var(--cover-clr-dark);
+  position: relative;
+}
+
+body::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--cover-clr);
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+button {
+  font-family: inherit;
+  outline: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
