@@ -8,7 +8,7 @@ import HomePage from "./pages/HomePage";
 
 const App = () => {
   return (
-    <div className='app-container w-full max-w-[1400px] min-h-screen text-light mx-auto'>
+    <div className='container w-full max-w-[1400px] min-h-screen text-light mx-auto'>
       <Routes>
         <Route path='/' element={<HomePage />} />
       </Routes>

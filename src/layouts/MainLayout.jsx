@@ -7,8 +7,10 @@ import Footer from "../components/Footer";
 const MainLayout = ({ children }) => {
   return (
     <>
-      <Header />
-      {children}
+      <div className='container w-full max-w-[1400px] text-light mx-auto'>
+        <Header />
+        {children}
+      </div>
       <Footer />
     </>
   );
