@@ -2,6 +2,9 @@
 @tailwind componenets;
 @tailwind utilities;
 
+/* Importing Font from Google-Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
 /* Font-Faces */
 @font-face {
   font-family: "lato";
@@ -16,7 +19,7 @@
   --cover-clr: rgba(20, 20, 20, 0.6);
   --cover-clr-dark: rgba(20, 20, 20, 0.8);
 
-  --ff-main: "lato";
+  --ff-main: "Lato", sans-serif;
 }
 
 /* CSS Reset */
@@ -38,9 +41,10 @@ html {
 }
 
 body {
-  font-family: var(--ff-main);
   background-color: var(--cover-clr-dark);
   position: relative;
+  font-family: var(--ff-main);
+  font-weight: lighter;
 }
 
 body::after {
@@ -64,4 +68,22 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+/* Utility Classes */
+.animated-link::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #ff4500;
+  position: absolute;
+  inset: 120% 0;
+  border-radius: 3px;
+  transform: scaleX(0);
+  transition: transform 0.2s linear;
+  transform-origin: center;
+}
+
+.animated-link:hover::after {
+  transform: scaleX(1);
 }
