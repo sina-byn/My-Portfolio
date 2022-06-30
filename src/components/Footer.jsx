@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className='w-full absolute bottom-0 left-0 z-[2] h-[5vh] bg-primary border-t-[1px] border-primary-light border-opacity-[12.5%] px-16 730:px-8'>
-      <div className='container flex items-center justify-between w-full h-full max-w-[1400px] text-light mx-auto'>
+    <footer className='w-full absolute bottom-0 left-0 z-[2] h-[5vh] bg-primary border-t-[1px] border-primary-light border-opacity-[12.5%] px-16 1030px:px-8'>
+      <div className='container flex items-center justify-between w-full h-full max-w-[1250px] text-light mx-auto'>
         <section className='icons flex gap-x-2'>
           <a
             className='flex items-center h-full pt-px'
@@ -21,7 +21,7 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            className='flex items-center h-full 768:hidden'
+            className='flex items-center h-full 768px:hidden'
             href='http://instagram.com/_u/sina_byn/'
             target='_blank'
             rel="noreferrer"
@@ -36,7 +36,7 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            className='hidden items-center h-full 768:flex'
+            className='hidden items-center h-full 768px:flex'
             href='instagram://user?username=sina_byn'
             target='_blank'
             rel="noreferrer"
@@ -53,7 +53,7 @@ const Footer = () => {
         </section>
         <section className='email'>
           <a
-            className='mail-address flex items-center gap-x-2 text-[0.85rem] font-light pb-[3px] hover:text-orangered'
+            className='mail-address flex items-center gap-x-2 text-[0.85rem] font-light pb-[3px]'
             href='mailto: sina.sina.bayan@protonmail.com'
             title='my mail'
           >
@@ -64,7 +64,7 @@ const Footer = () => {
             >
               <path d='M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z' />
             </svg>
-            <span className='400:hidden initial pt-px'>
+            <span className='400px:hidden initial pt-px hover:text-orangered hover:font-[400] hover:mt-[2px] hover:-mr-[5px]'>
               sina.sina.bayandorian@protonmail.com
             </span>
           </a>

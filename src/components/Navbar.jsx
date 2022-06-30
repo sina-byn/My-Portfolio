@@ -1,45 +1,70 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuShown, setIsMenuShown] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  useEffect(() => {
+    setCurrentPage(() => {
+      switch (pathname) {
+        case "/about-me":
+          return 3;
+        default:
+          return 1;
+      }
+    });
+  }, [currentPage, pathname]);
+
   const toggleMenuVisibility = () => {
     setIsMenuShown(!isMenuShown);
   };
+
   return (
     <>
-      <nav className={`${isMenuShown ? "" : "730:translate-x-full"} 730:h-full 730:fixed 730:top-0 730:right-0 z-10 730:min-w-[25%] 730:bg-[#333] 730:py-0 730:px-[25px] transition-all duration-500 ease-in-out`}>
-        <ul className='nav-list flex items-center gap-x-9 730:h-full 730:flex-col 730:justify-center 730:gap-[30px] 730:relative'>
-          <li className='730:text-center'>
+      <nav
+        className={`${
+          isMenuShown ? "" : "730px:translate-x-full"
+        } 730px:h-full 730px:fixed 730px:top-0 730px:right-0 z-40 730px:min-w-[25%] 730px:bg-[#333] 730px:py-0 730px:px-[25px] transition-all duration-500 ease-in-out`}
+      >
+        <ul className='nav-list flex items-center gap-x-9 730px:h-full 730px:flex-col 730px:justify-center 730px:gap-[30px] 730px:relative'>
+          <li className='730px:text-center'>
             <Link
               to='/'
               onClick={() => setCurrentPage(1)}
-              className={`${currentPage === 1 ? "current-page-link" : ""} animated-link relative text-[18px] 730:text-[1.1rem]`}
+              className={`${
+                currentPage === 1 ? "current-page-link" : ""
+              } animated-link relative text-[18px] 730px:text-[1.1rem]`}
             >
               Home
             </Link>
           </li>
-          <li className='730:text-center'>
+          <li className='730px:text-center'>
             <Link
               to='/my-work'
               onClick={() => setCurrentPage(2)}
-              className={`${currentPage === 2 ? "current-page-link" : ""} animated-link relative text-[18px] 730:text-[1.1rem]`}
+              className={`${
+                currentPage === 2 ? "current-page-link" : ""
+              } animated-link relative text-[18px] 730px:text-[1.1rem]`}
             >
               My Work
             </Link>
           </li>
-          <li className='730:text-center'>
+          <li className='730px:text-center'>
             <Link
               to='/about-me'
               onClick={() => setCurrentPage(3)}
-              className={`${currentPage === 3 ? "current-page-link" : ""} animated-link relative text-[18px] 730:text-[1.1rem]`}
+              className={`${
+                currentPage === 3 ? "current-page-link" : ""
+              } animated-link relative text-[18px] 730px:text-[1.1rem]`}
             >
               About Me
             </Link>
           </li>
           <svg
-            className='menu-close-btn hidden 730:block w-[17px] absolute top-[22px] right-[5px] fill-light cursor-pointer hover:fill-orangered'
+            className='menu-close-btn hidden 730px:block w-[17px] absolute top-[22px] right-[5px] fill-light cursor-pointer hover:fill-orangered'
             onClick={toggleMenuVisibility}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 320 512'
@@ -49,14 +74,19 @@ const Navbar = () => {
         </ul>
       </nav>
       <svg
-        className='menu-show-btn hidden fill-light cursor-pointer 730:block 730:w-[1.5rem]'
+        className='menu-show-btn hidden fill-light cursor-pointer 730px:block 730px:w-[1.5rem] hover:fill-orangered'
         onClick={toggleMenuVisibility}
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 448 512'
       >
         <path d='M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z' />
       </svg>
-      <div onClick={toggleMenuVisibility} className={`${isMenuShown ? "" : "-translate-x-full"} cover hidden 730:block w-full h-full fixed top-0 left-0 bg-cover/50 transition-transform duration-500 ease-in-out cursor-pointer`}></div>
+      <div
+        onClick={toggleMenuVisibility}
+        className={`${
+          isMenuShown ? "" : "-translate-x-full"
+        } cover hidden 730px:block w-full h-full fixed top-0 left-0 z-30 bg-cover/50 transition-transform duration-500 ease-in-out cursor-pointer`}
+      ></div>
     </>
   );
 };
