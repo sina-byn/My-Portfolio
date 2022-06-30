@@ -43,7 +43,7 @@ const NotFound = () => {
             points='0.9,0.1 0.1,0.5 0.9,0.9'
           />
         </svg>
-        Home
+        Go Back
       </button>
       <div className={styles.background_wrapper}>
         <h1 ref={errorCodeRef} className={styles.error_code}>
