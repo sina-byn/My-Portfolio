@@ -7,7 +7,7 @@ const AboutMe = () => {
   return (
     <MainLayout>
       <main className='w-full h-[85vh] 1030px:overflow-y-auto'>
-        <div className='content-wrap flex justify-between h-full 1030px:h-fit w-full 1030px:flex-col'>
+        <div className='content-wrap flex justify-between h-full 1030px:h-fit w-full 1030px:flex-col 1030px:pb-[25px]'>
           <section className='flex justify-center items-center w-1/2 pr-[100px] 500px:pr-[18%] 900px:pr-[10%] 1030px:w-full 1030px:mt-20'>
             <figure className='w-[320px] h-[320px] bg-orangered font-medium rounded-blob 360px:w-[190px] 360px:h-[190px] 500px:w-[220px] 500px:h-[220px] 1030px:max-w-[280px] 1030px:max-h-[280px]'>
               <img
@@ -17,7 +17,7 @@ const AboutMe = () => {
               />
             </figure>
           </section>
-          <section className='w-1/2 overflow-y-auto overflow-x-hidden pr-4 pb-4 1030px:w-full 1030px:overflow-y-hidden 1030px:mt-10'>
+          <section className='w-1/2 overflow-y-auto overflow-x-hidden 1030px:px-10 1030px:w-full 1030px:overflow-y-hidden'>
             <h2 className='text-[1.4rem] font-medium mb-[20px]'>About Me</h2>
             <p>
               <span className='text-orangered font-medium'>First Name: </span>
