@@ -1,7 +1,7 @@
 import React from "react";
 
 // Importing React-Router-DOM
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 // Importing Pages
 import HomePage from "./pages/HomePage";
