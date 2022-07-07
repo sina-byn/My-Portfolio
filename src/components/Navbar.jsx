@@ -12,6 +12,8 @@ const Navbar = () => {
       switch (pathname) {
         case "/about-me":
           return 3;
+        case "/my-work":
+          return 2;
         default:
           return 1;
       }
