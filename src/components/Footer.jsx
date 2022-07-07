@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className='w-full absolute bottom-0 left-0 z-[2] h-[5vh] bg-primary border-t-[1px] border-primary-light border-opacity-[12.5%] px-16 1030px:px-8'>
-      <div className='container flex items-center justify-between w-full h-full max-w-[1250px] text-light mx-auto'>
-        <section className='icons flex gap-x-2'>
+      <div className='container flex items-center justify-between w-full max-w-[1275px] h-full text-light mx-auto'>
+        <section className='icons flex gap-x-2 730px:ml-0 1030px:-ml-3'>
           <a
             className='flex items-center h-full pt-px'
             href='https://github.com/sina-byn'
