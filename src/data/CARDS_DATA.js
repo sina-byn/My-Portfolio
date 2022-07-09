@@ -1,5 +1,15 @@
 const CARDS_DATA = [
     {
+        link: "https://all-gradients.vercel.app/",
+        repoLink: "https://github.com/sina-byn/All-Gradients",
+        title: "gradient archive and generator app - all-gradients",
+        img: "/images/posters/all-gradients-poster.webp",
+        alt: "All-Gradients App Poster",
+        video: null,
+        features: "gradient archive - gradient generator - gradient CSS code generator",
+        techStack: "Webpack v.5 - handlebars - vanilla JS - Tailwind CSS - sass",
+    },
+    {
         link: "https://crypto-watcher-sina-byn.vercel.app/",
         repoLink: "https://github.com/sina-byn/Crypto-Watcher",
         title: "crypto price tracker",
