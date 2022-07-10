@@ -17,7 +17,7 @@ const AboutMe = () => {
               />
             </figure>
           </section>
-          <section className='w-1/2 overflow-y-auto overflow-x-hidden 1030px:px-10 1030px:w-full 1030px:overflow-y-hidden'>
+          <section className='w-1/2 overflow-y-auto overflow-x-hidden 1030px:px-10 1030px:w-full 1030px:overflow-y-hidden pb-10 mt-16'>
             <h2 className='text-[1.4rem] font-medium mb-[20px]'>About Me</h2>
             <p>
               <span className='text-orangered font-medium'>First Name: </span>
@@ -49,8 +49,10 @@ const AboutMe = () => {
               <h6>TailwindCSS</h6>
               <h6>JavaScript</h6>
               <h6>TypeScript</h6>
+              <h6>Webpack - 5</h6>
               <h6>React.JS</h6>
               <h6>Next.JS</h6>
+              <h6>Git and Github</h6>
               <div className='w-1/2 mx-auto pr-[50px] mt-6 1030px:pr-[35px] 730px:w-full 730px:text-center'>
                 <a
                   className='text-[0.8rem] border-[2px] border-light px-[20px] pt-[10px] pb-[13px] hover:bg-[#535353]/40 active:bg-[#535353]/80'

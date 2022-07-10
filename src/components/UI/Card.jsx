@@ -29,7 +29,7 @@ const Card = ({
   }
 
   return (
-    <div className={`card bg-[#222] border-[3px] border-primary-light border-opacity-20 px-[15px] pt-[15px] ${repoLink ? "pb-[15px]" : ""}`}>
+    <div className={`card grid grid-cols-1 bg-[#222] border-[3px] border-primary-light border-opacity-20 px-[15px] pt-[15px] ${repoLink ? "pb-[15px]" : ""}`}>
       <figure className='flex items-center justify-center w-full relative mb-[8px]'>
         <div className='cover w-full h-full absolute top-0 left-0 bg-cover/40'></div>
         <img src={img} alt={alt} className='w-full' />
@@ -81,7 +81,7 @@ const Card = ({
             href={repoLink}
             target='_blank'
             rel='noreferrer'
-            className='w-[50%] text-[13px] text-center text-[15px] border-[2px] border-primary-light/20 px-[10px] pt-[12px] pb-[10px] mx-auto mt-1 hover:bg-[#ccc] hover:bg-opacity-[15%]'
+            className='self-end w-[50%] text-[13px] text-center text-[15px] border-[2px] border-primary-light/20 px-[10px] pt-[12px] pb-[10px] mx-auto mt-1 hover:bg-[#ccc] hover:bg-opacity-[15%]'
           >
             Github Repo
           </a>
